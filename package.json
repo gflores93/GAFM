@@ -2,6 +2,7 @@
   "name": "gafm",
   "version": "0.0.0",
   "scripts": {
+    "build:en":"ng build --aot --configuration production --outputHashing=all ",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

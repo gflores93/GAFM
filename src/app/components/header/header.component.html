@@ -1,0 +1,11 @@
+<div class="body container-fluid">
+    <div class="wrapper">
+        <div class="static-txt">I am </div>
+        <ul class="dynamic-txts">
+            <li *ngFor="let description of descriptions"><span>{{ description }}</span></li>
+        </ul>
+    </div>
+    <div class="wrapper-sm">
+        <span>Guillermo Flores</span>
+    </div>
+</div>

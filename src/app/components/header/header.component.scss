@@ -1,0 +1,105 @@
+$lineHeight: 90px;
+$fontSize: 60px;
+$numberOfElements: 3;
+$typingTime: 3s;
+$slideTime: $numberOfElements * $typingTime;
+$slideTop: -$numberOfElements * $lineHeight;
+$maxLength: 20;
+$backgroundColor: rgb(56, 45, 45); //#343F4F;
+$dynamicColor: #FC6D6D;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vw;
+    // background: $backgroundColor;
+    background-image: url(../../../assets/background1.jpg);
+    background-color: $backgroundColor;
+    background-blend-mode: screen;
+}
+
+.wrapper-sm {
+    display: none !important;
+    font-size: 8vw;
+    word-wrap: break-word;
+    color: $dynamicColor;
+}
+
+.wrapper {
+    display: inline-flex;
+
+    .static-txt {
+        color: #fff;
+        font-size: $fontSize;
+        font-weight: 400;
+    }
+
+    .dynamic-txts {
+        margin-left: 1vw;
+        height: $lineHeight;
+        line-height: $lineHeight;
+        overflow: hidden;
+    }
+}
+
+.dynamic-txts li {
+    color: $dynamicColor;
+    list-style: none;
+    font-size: $fontSize;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide $slideTime steps($numberOfElements) infinite;
+
+    span {
+        position: relative;
+    }
+
+    // span::after {
+    //     top: 0;
+    //     content: "";
+    //     position: absolute;
+    //     left: 0;
+    //     height: 100%;
+    //     width: 100%;
+    //     background: $backgroundColor;
+    //     border-left: 2px solid $dynamicColor;
+    //     animation: typing $typingTime steps($maxLength) infinite;
+    // }
+}
+
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -1rem 0 1rem;
+    }
+}
+
+@keyframes slide {
+    100% {
+        top: $slideTop;
+    }
+}
+
+/* Smartphones (portrait and landscape) */
+@media only screen and (max-device-width : 800px) {
+    .wrapper {
+        display: none !important;
+        background-color: green;
+    }
+
+    .wrapper-sm {
+        display: inline-block !important;
+    }
+}
+
