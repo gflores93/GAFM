@@ -4,7 +4,7 @@
           <li *ngFor="let item of navItems; let i = index"
             class="nav-item">
             <a class="nav-link" [routerLink]="item.route" routerLinkActive="is-active"
-            [ngClass]="{'active': selectedIndex == i}" (click)="select(i)">{{ item.name }}</a>
+            [ngClass]="{'active': selectedIndex == i}" (click)="onClick(i, item.route)">{{ item.name }}</a>
           </li>
       </ul>
   </div>

@@ -11,3 +11,4 @@
 * Footer required? 
 * Navbar
     - Smooth scrolling instead of router-link
+    - Go to the top when loading

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,22 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  @Output() scrollToElement = new EventEmitter<string>();
   public navItems: Array<any> = [
-    { name: 'Home', route: '/home' },
-    { name: 'About', route: '/about' },
-    { name: 'Portfolio', route: '/portfolio' },
-    { name: 'Contact', route: '/contact' }
+    { name: 'Home', route: 'home' },
+    { name: 'About', route: 'about' },
+    { name: 'Portfolio', route: 'portfolio' },
+    { name: 'Contact', route: 'contact' }
   ];
   public selectedIndex: number = 0;
 
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log('navbar on Init');
+  ngOnInit(): void {}
+
+  onClick(index: number, route: string) {
+    this.selectedIndex = index;
+    this.scrollToElement.emit(route);
   }
 
-  select(index: number) {
-    this.selectedIndex = index;
-  }
 }
