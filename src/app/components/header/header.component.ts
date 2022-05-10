@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  descriptions: string[] = ['Guillermo Flores', 'an Engineer', 'a Front end developer'];
+  descriptions: string[] = ['Guillermo Flores', 'a Front-End Developer'];
+  introduction: string = 'Hello, my name is Guillermo Flores.';
+  description: string = 'I am a self-taught Front-End developer living in Germany';
   constructor() { }
 
   ngOnInit(): void {

@@ -3,7 +3,7 @@
 $color1: #233142;
 $color2: #455d7a;
 $color3: #f95959;
-$color4: #e3e3e3;
+$color4: whitesmoke;
 
 
 html {
@@ -13,6 +13,9 @@ html {
 
 body {
     background-color: $color4;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Monaco', 'Courier New', Courier, monospace;
 
 }
 

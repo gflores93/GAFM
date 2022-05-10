@@ -1,0 +1,13 @@
+* About
+    - Description
+    - Dynamic information (forEach)
+* Projects
+    - Disable inactive Projects
+    - Flip card effect when hovering
+    - Verify info
+* Contact
+    - Form to send msg
+    - Icons 
+* Footer required? 
+* Navbar
+    - Smooth scrolling instead of router-link
