@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  public github: string = 'https://github.com/gflores93';
+  public linkedin: string = 'https://linkedin.com/in/gflores93/';
+
+
   constructor() { }
 
   ngOnInit(): void {

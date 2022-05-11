@@ -8,9 +8,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class NavbarComponent implements OnInit {
   @Output() scrollToElement = new EventEmitter<string>();
   public navItems: Array<any> = [
-    { name: 'Home', route: 'home' },
+    // { name: 'Home', route: 'home' },
     { name: 'About', route: 'about' },
-    { name: 'Portfolio', route: 'portfolio' },
+    { name: 'Projects', route: 'portfolio' },
     { name: 'Contact', route: 'contact' }
   ];
   public selectedIndex: number = 0;

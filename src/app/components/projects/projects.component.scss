@@ -9,3 +9,48 @@ a {
     align-items: center;
     justify-content: center;
 }
+
+.img-disabled {
+    filter: grayscale(1.0) !important;
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-weight: 800;
+    font-size: 3em;
+    -webkit-text-stroke: 2px black; /* width and color */
+}
+
+.img-tech {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    font-size: 2em;
+    opacity: 0;
+    -webkit-text-stroke: 2px black; /* width and color */
+
+
+}
+
+
+.img-container:hover {
+    .img-tech {
+        opacity: 1;
+    }
+    img {
+        filter: brightness(1.5);
+    }
+}
+
+//card-img class is very important to fit the img corectly in the container

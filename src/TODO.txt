@@ -5,10 +5,18 @@
     - Disable inactive Projects
     - Flip card effect when hovering
     - Verify info
+    - Include the technologies as icons below the card 
 * Contact
     - Form to send msg
     - Icons 
+    - Contact button should open a modal with a Form
 * Footer required? 
 * Navbar
     - Smooth scrolling instead of router-link
     - Go to the top when loading
+    - Active class when scrolling over sections? if clicked it is activated
+     but if scrolling you can change of section and the active class doesnt make sense
+* Routes
+    - Default Routes
+    - Use of routing if scrolling is used
+
